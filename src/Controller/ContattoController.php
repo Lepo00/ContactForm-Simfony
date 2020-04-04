@@ -3,6 +3,7 @@ namespace App\Controller;
 
 use App\Entity\Contatto;
 use App\Form\ContattoForm;
+use App\Form\Edit;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpFoundation\Request;
@@ -56,7 +57,7 @@ class ContattoController extends AbstractController{
 
         $entity=isset($storico_richieste[$id]) ? $storico_richieste[$id]: new Contatto() ;
 
-        $form = $this->createForm(ContattoForm::class, $entity);
+        $form = $this->createForm(Edit::class, $entity);
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){

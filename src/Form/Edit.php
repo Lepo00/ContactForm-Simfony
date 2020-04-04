@@ -12,7 +12,7 @@
     use Symfony\Component\Form\FormBuilderInterface;
 
     
-    class ContattoForm extends AbstractType {     
+    class Edit extends AbstractType {     
 
         public function buildForm(FormBuilderInterface $builder, array $options){
         $builder
