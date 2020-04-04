@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <style></style>
+</head>
+
+<body>
+    {% if mostra %}
+    <p>{{messaggio_conferma}} {{info.nome}}</p><br>
+    <div>
+        richiesta n. {{contatore}} {{info.nome}}
+        <br> {{info.cognome}}
+        <br> {{info.email}}
+        <br> {{info.telefono}}
+        <br>
+    </div>
+    {% else %} FORM DI CONTATTO {{form(form)}} {% endif %}
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}GESTIONE CONTATTI{% endblock %}</title>
+</head>
+
+<body>
+    {% block body %}{% endblock %}
+    <table class="table" styte="width: 80%">
+        <tr>
+            <th>nome</th>
+            <th>cognome</th>
+        </tr>
+        {% for item in richieste %}
+        <tr>
+            <td>{{item.nome}}</td>
+            <td>{{item.cognome}}</td>
+            <td><a href="edit-contatto?id={{loop.index0}}">edit</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+
+</html>

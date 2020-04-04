@@ -1,0 +1,32 @@
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}EDIT CONTATTO{% endblock %}</title>
+</head>
+
+<body>
+    {{ form_start(form) }}
+    <div class="my-custom-class-for-errors">
+        {{ form_errors(form) }}
+    </div>
+    <div class="row">
+        <div class="col">
+            {{ form_row(form.nome) }}
+        </div>
+        <div class="col" id="some-custom-id">
+            {{ form_row(form.cognome ) }}
+        </div>
+        <div>
+            {{form_row(form.save)}}
+        </div>
+        <div>
+            {{ form_row(form._token) }}
+        </div>
+    </div>
+    {{ form_end(form, {'render_rest': false}) }}
+
+</body>
+
+</html>

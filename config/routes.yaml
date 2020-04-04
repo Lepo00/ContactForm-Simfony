@@ -1,0 +1,10 @@
+contatti:
+  path: /contatti
+  controller: App\Controller\ContattoController::visualizzaContatto
+gestione:
+  path: /gestione-contatti
+  controller: App\Controller\ContattoController::gestioneContatti
+modifica:
+  path: /edit-contatto
+  controller: App\Controller\ContattoController::editContatto
+
