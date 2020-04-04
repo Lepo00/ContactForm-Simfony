@@ -45,9 +45,8 @@ class ContattoController extends AbstractController{
     public function gestioneContatti(Request $request){
         $session=$this->get("session");
         $storico_richieste = $session->get("storico");
-
         $template = 'gestione-contatti.html.twig';
-        return $this->render($template,['richieste'=> $storico_richieste,]);
+        return $this->render($template,['richieste'=> $storico_richieste]);
     }
 
     public function editContatto(Request $request){

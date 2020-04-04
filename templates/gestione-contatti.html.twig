@@ -13,7 +13,7 @@
             <th>nome</th>
             <th>cognome</th>
         </tr>
-        {% for item in richieste %}
+        {% for item in richieste|reverse %}
         <tr>
             <td>{{item.nome}}</td>
             <td>{{item.cognome}}</td>
