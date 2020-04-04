@@ -59,6 +59,9 @@ class ContattoController extends AbstractController{
         $form = $this->createForm(ContattoForm::class, $entity);
         $form->handleRequest($request);
 
+        if($form->isSubmitted() && $form->isValid()){
+            return $this->redirectToRoute('gestione');
+        }
 
         $template='edit-contatto.html.twig';
         return $this->render($template,[

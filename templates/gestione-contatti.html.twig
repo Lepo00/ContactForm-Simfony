@@ -33,7 +33,7 @@
             <td>
                 {% if item.notaOperatore %} {{item.notaOperatore}} {% else %} Vuoto {% endif %}
             </td>
-            <td><a href="edit-contatto?id={{loop.index0}}">edit</a></td>
+            <td><a href="edit-contatto?id={{loop.revindex0}}">edit</a></td>
         </tr>
         {% endfor %}
     </table>
