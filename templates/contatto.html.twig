@@ -15,7 +15,43 @@
         <br> {{info.telefono}}
         <br>
     </div>
-    {% else %} FORM DI CONTATTO {{form(form)}} {% endif %}
+    {% else %} FORM DI CONTATTO {{ form_start(form) }}
+    <div class="my-custom-class-for-errors">
+        {{ form_errors(form) }}
+    </div>
+    <div class="row">
+        <div class="col">
+            {{ form_row(form.nome) }}
+        </div>
+        <div class="col">
+            {{ form_row(form.cognome) }}
+        </div>
+        <div class="col">
+            {{ form_row(form.email) }}
+        </div>
+        <div class="col">
+            {{ form_row(form.telefono ) }}
+        </div>
+        <div class="col">
+            {{ form_row(form.oggetto) }}
+        </div>
+        <div class="col">
+            {{ form_row(form.messaggio) }}
+        </div>
+        <div class="col">
+            {{ form_row(form.privacy) }}
+        </div>
+        <div class="col">
+            {{ form_row(form.newsletter) }}
+        </div>
+        <div>
+            {{form_row(form.save)}}
+        </div>
+        <div>
+            {{ form_row(form._token) }}
+        </div>
+    </div>
+    {{ form_end(form, {'render_rest': false}) }} {% endif %}
 </body>
 
 </html>

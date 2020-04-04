@@ -29,7 +29,7 @@
             ->add('messaggio', TextareaType::class,[])
             ->add('privacy', CheckboxType::class, ['required' => true,])
             ->add('newsletter', CheckboxType::class, ['required' => false,'data' => false,])
-            ->add('notaOperatore', TextareaType::class,['required' => false,'data' => 'pieno',])
+            ->add('notaOperatore', TextareaType::class,['required' => false,])
             ->add('save', SubmitType::class);
         }
     
