@@ -12,11 +12,27 @@
         <tr>
             <th>nome</th>
             <th>cognome</th>
+            <th>email</th>
+            <th>telefono</th>
+            <th>oggetto</th>
+            <th>messaggio</th>
+            <th>privacy</th>
+            <th>newsletter</th>
+            <th>notaOperatore</th>
         </tr>
         {% for item in richieste|reverse %}
         <tr>
             <td>{{item.nome}}</td>
             <td>{{item.cognome}}</td>
+            <td>{{item.email}}</td>
+            <td>{{item.telefono}}</td>
+            <td>{{item.oggetto}}</td>
+            <td>{{item.messaggio}}</td>
+            <td>{{item.privacy}}</td>
+            <td>{{item.newsletter}}</td>
+            <td>
+                {% if item.notaOperatore %} {{item.notaOperatore}} {% else %} Vuoto {% endif %}
+            </td>
             <td><a href="edit-contatto?id={{loop.index0}}">edit</a></td>
         </tr>
         {% endfor %}

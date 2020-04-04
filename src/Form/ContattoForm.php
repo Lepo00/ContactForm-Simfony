@@ -18,7 +18,7 @@
         $builder
             ->add('nome', TextType::class)
             ->add('cognome', TextType::class)
-            ->add('email',EmailType::class,['required' => false,])
+            ->add('email',EmailType::class,['required' => false,],)
             ->add('telefono',TelType::class,['required' => false,] )
             ->add('oggetto', ChoiceType::class,
             ['choices'=>[
@@ -26,9 +26,10 @@
                 'commerciale'=>'Commerciale',
             ],
             ])
-            ->add('messaggio', TextareaType::class,)
-            ->add('privacy', CheckboxType::class, ['required' => false,])
-            ->add('newsletter', CheckboxType::class, ['required' => false,])
+            ->add('messaggio', TextareaType::class,[])
+            ->add('privacy', CheckboxType::class, ['required' => true,])
+            ->add('newsletter', CheckboxType::class, ['required' => false,'data' => false,])
+            ->add('messaggio', TextareaType::class,[])
             ->add('save', SubmitType::class);
         }
     

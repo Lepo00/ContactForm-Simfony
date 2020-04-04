@@ -10,6 +10,9 @@
         private $messaggio;
         private $privacy;
         private $newsletter;
+        private $notaOperatore;
+
+        
 
         public function getNome()
         {
@@ -88,7 +91,15 @@
         public function setNewsletter($newsletter)
         {
                 $this->newsletter = $newsletter;
-
+                return $this;
+        }
+        public function getNotaOperatore()
+        {
+                return $this->notaOperatore;
+        }
+        public function setNotaOperatore($notaOperatore)
+        {
+                $this->notaOperatore = $notaOperatore;
                 return $this;
         }
     }
