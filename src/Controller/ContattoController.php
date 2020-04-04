@@ -65,7 +65,7 @@ class ContattoController extends AbstractController{
 
         $template='edit-contatto.html.twig';
         return $this->render($template,[
-            'form'=> $form->createView(),
+            'form'=> $form->createView(),'persona'=>$storico_richieste[$id],
         ]);
     }
 }
